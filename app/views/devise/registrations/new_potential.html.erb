@@ -1,0 +1,26 @@
+<h2>現在のBIG３</h2>
+
+<%= form_for @potential do |f| %>
+  <%= render "devise/shared/error_messages", resource: @potential %>
+
+  <div class="field">
+    <%= f.label :bench_press %><br />
+    <%= f.text_field :bench_press %>
+  </div>
+
+  <div class="field">
+    <%= f.label :squat %><br />
+    <%= f.text_field :squat %>
+  </div>
+
+  <div class="field">
+    <%= f.label :deadlift %><br />
+    <%= f.text_field :deadlift %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
