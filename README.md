@@ -26,5 +26,27 @@ has_one :potential
 | deadlift              |string        | null:false  |
 | user_id               |references        | null:false, foreign key:true  |
 
+### Association
+
 belongs_to :user
 
+
+## mainテーブル
+
+| Column                |Type          | Options     |
+|----------------------------------------------------|
+| run                |string        | null:false, unique:true |
+| bench_press        |string        | null:false  |
+| squat              |string        | null:false  |
+| deadlift           |string        | null:false  |
+| abdominal_muscle   |string        | null:false  |
+| suspension         |string        | null:false  |
+| others             |string        | null:false  |
+| user_id            |references    | null:false, foreign key:true  |
+
+
+
+
+### Association
+
+belongs_to :user

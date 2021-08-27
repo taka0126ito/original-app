@@ -1,0 +1,43 @@
+
+<%= render "shared/header" %>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>今日のトレーニング</title>
+<link rel="stylesheet" media="all" href="css/ress.min.css" />
+<link rel="stylesheet" media="all" href="css/style.css" />
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/style.js"></script>
+
+<!-- Favicon -->
+<link rel="icon" type="assets/png" href="assets/favicon.png">
+    
+</head>
+<body>
+<header>    
+<div class="container">
+<div class="row">
+    <div class="col span-12">
+    <div class="head">
+        <h1><%= link_to "training diary", root_path %></h1>
+		<div class="snsbox">
+			<img src="assets/in-icon.png" alt="Instagram">
+		    <img src="assets/fb-icon.png" alt="Facebook"></div>
+        </div>
+    </div></div>
+<div class="row">
+    <div class="col span-12">
+        <nav>
+            <div id="open"></div>
+            <div id="close"></div>   
+            <div id="navi">
+        <ul>
+            <li><%= link_to "ホーム", root_path %></li>
+            <li><%= link_to "今日のトレーニング", new_main_path %></li>
+           
+
+            </ul>
+                </div>
+        </nav>
+    </div>
+        </div>
+    </div>

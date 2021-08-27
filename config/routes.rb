@@ -7,6 +7,8 @@ registrations: 'users/registrations'
     post 'potentials', to: 'users/registrations#create_potential'
   end
   root to: 'mains#index'
+
+  resources :mains 
 end
 
 
