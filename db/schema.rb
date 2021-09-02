@@ -34,14 +34,11 @@ ActiveRecord::Schema.define(version: 2021_08_27_023656) do
   end
 
   create_table "mains", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "run"
-    t.string "bench_press"
-    t.string "squat"
-    t.string "deadlift"
-    t.string "abdominal_muscle"
-    t.string "suspension"
-    t.string "others"
     t.bigint "user_id"
+    t.integer "event_id", null: false
+    t.integer "weight_id", null: false
+    t.integer "sets_id", null: false
+    t.integer "number_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_mains_on_user_id"

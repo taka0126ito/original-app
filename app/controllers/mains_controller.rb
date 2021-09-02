@@ -1,15 +1,28 @@
 class MainsController < ApplicationController
 
-  def index
-    #@user = User.nickname
 
+  
+
+  def index
+    @mains = Main.all.order(created_at: :DESC)
   end
 
   def new
-  @main = Main.new
+    @main = Main.new
   end
 
   def edit
+  end
+
+  def create
+    
+    @main = Main.new(main_params)
+    if @main.save
+      redirect_to root_path
+    else
+      render :new
+
+    end
   end
 
   def show
@@ -18,10 +31,16 @@ class MainsController < ApplicationController
   def update
   end
 
-private
+  def destroy
+    main = Main.find(params[:id])
+    main.destroy
+    redirect_to root_path
+  end
 
-def main_params
-  params.recuire(:main).permit(:image).merge(user_id: current_user.id)
-end
+  private
+
+  def main_params
+    params.require(:main).permit(:image, :event_id, :weight_id, :number_id, :sets_id).merge(user_id: current_user.id)
+  end
 
 end

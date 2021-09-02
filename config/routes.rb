@@ -8,7 +8,8 @@ registrations: 'users/registrations'
   end
   root to: 'mains#index'
 
-  resources :mains 
+  resources :mains
+  
 end
 
 

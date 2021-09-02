@@ -10,34 +10,31 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def create
     @user = User.new(sign_up_params)
-     unless @user.valid?
-       render :new and return
-     end
-    session["devise.regist_data"] = {user: @user.attributes}
-    session["devise.regist_data"][:user]["password"] = params[:user][:password]
+    render :new and return unless @user.valid?
+
+    session['devise.regist_data'] = { user: @user.attributes }
+    session['devise.regist_data'][:user]['password'] = params[:user][:password]
     @potential = @user.build_potential
     render :new_potential
   end
 
   def create_potential
-    @user = User.new(session["devise.regist_data"]["user"])
+    @user = User.new(session['devise.regist_data']['user'])
     @potential = Potential.new(potential_params)
-     unless @potential.valid?
-       render :new_potential and return
-     end
+    render :new_potential and return unless @potential.valid?
+
     @user.build_potential(@potential.attributes)
     @user.save
-    session["devise.regist_data"]["user"].clear
+    session['devise.regist_data']['user'].clear
     sign_in(:user, @user)
   end
- 
+
   private
- 
+
   def potential_params
     params.require(:potential).permit(:bench_press, :squat, :deadlift)
   end
 
-  
   # GET /resource/sign_up
   # def new
   #   super

@@ -1,43 +1,47 @@
 
 <%= render "shared/header" %>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>今日のトレーニング</title>
-<link rel="stylesheet" media="all" href="css/ress.min.css" />
-<link rel="stylesheet" media="all" href="css/style.css" />
-<script src="js/jquery-2.1.4.min.js"></script>
-<script src="js/style.js"></script>
 
-<!-- Favicon -->
-<link rel="icon" type="assets/png" href="assets/favicon.png">
+<%= form_with model: @main, url:mains_path, local: true do |f| %>
+<label class="form-image">
+<%= f.file_field :image, id:"item-image" %>
+
+    </label>
+  <div class="main-box">
+    種目
+    </div>
+    <div class="event-select">
+    <%= f.collection_select(:event_id, Event.all, :id, :name, {}) %>
+    </div>
+
+    <div class="main-box">
+    重量
+    </div>
+    <div class="weight-select">
+    <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}) %>
+    </div>
+
+    <div class="main-box">
+    回数
+    </div>
+    <div class="number-select">
+    <%= f.collection_select(:number_id, Number.all, :id, :name, {}) %>
+    </div>
+
+    <div class="main-box">
+    セット数
+    </div>
+    <div class="set-select">
+    <%= f.collection_select(:sets_id, Sets.all, :id, :name, {}) %>
+    </div>
     
-</head>
-<body>
-<header>    
-<div class="container">
-<div class="row">
-    <div class="col span-12">
-    <div class="head">
-        <h1><%= link_to "training diary", root_path %></h1>
-		<div class="snsbox">
-			<img src="assets/in-icon.png" alt="Instagram">
-		    <img src="assets/fb-icon.png" alt="Facebook"></div>
-        </div>
-    </div></div>
-<div class="row">
-    <div class="col span-12">
-        <nav>
-            <div id="open"></div>
-            <div id="close"></div>   
-            <div id="navi">
-        <ul>
-            <li><%= link_to "ホーム", root_path %></li>
-            <li><%= link_to "今日のトレーニング", new_main_path %></li>
-           
+    <div class="cp-btn">
+    <%= f.submit "登録" %>
 
-            </ul>
-                </div>
-        </nav>
-    </div>
-        </div>
-    </div>
+
+  </div>
+  
+<% end %>
+
+
+ 

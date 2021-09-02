@@ -1,12 +1,5 @@
-/*
- * grid
- * version:v1.0
- * Developer:popodesign
- * URL:https://popo-design.net
- */
 
-/* 全体の設定
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 html {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -16,38 +9,38 @@ html {
 
 body {
     color: black;
-    font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  
     background:#fff;
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1;
     margin:0;
 	padding:0;
 }
 
-/* グリッド
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 .container {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 100vw;
     padding: 0 2.0rem;
     position: relative;
 }
-/* ブロックを縦に表示 */
+
 .row {
     display: flex;
     flex-direction: column;
     padding: 0;
-    width: 100%;
+    width: 100vw;
+    
 }
 .col {
     display: block;
     flex: 1 1 auto;
     margin-left: 0;
-    max-width: 100%;
-    width: 100%;
+    max-width: 100vw;
+    width: 100vw;
 }
-/* 768px以上の表示 */
+
 @media ( min-width : 768px ) {
 .row {
     display: flex;
@@ -109,60 +102,9 @@ body {
 .row .col.span-12 {
     flex: 0 0 100%;
     max-width: 100%;
+    font-size: 15px;
 }
 
-/* オフセット */
-.row .col.offset-1 {
-    margin-left: 8.66666666667%;
-}
-.row .col.offset-2 {
-    margin-left: 17.3333333333%;
-}
-.row .col.offset-3 {
-    margin-left: 26%;
-}
-.row .col.offset-4 {
-    margin-left: 34.6666666667%;
-}
-.row .col.offset-5 {
-    margin-left: 43.333333333%;
-}
-.row .col.offset-6 {
-    margin-left: 52%;
-}
-.row .col.offset-7 {
-    margin-left: 60.6666666667%;
-}
-.row .col.offset-8 {
-    margin-left: 69.3333333333%;
-}
-.row .col.offset-9 {
-    margin-left: 78.0%;
-}
-.row .col.offset-10 {
-    margin-left: 86.6666666667%;
-}
-.row .col.offset-11 {
-    margin-left: 95.3333333333%;
-}    
-}
-
-
-/* 見出し
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 2rem;
-  font-weight: 300;
-  letter-spacing: 0.1em;}
-h1 { font-size: 3.5rem; line-height: 1.2;  letter-spacing: -.1rem;}
-h2 { font-size: 3.2rem; line-height: 1.25; letter-spacing: -.1rem; }
-h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
-h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
-h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
-h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
-
-/* モバイル表示 */
 @media (min-width: 550px) {
   h1 { font-size: 4.0rem; }
   h2 { font-size: 3.5rem; }
@@ -176,16 +118,14 @@ p {
   margin-top: 0; }
 
 
-/* リンク
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 a {
   color: #1EAEDB; }
 a:hover {
   color: #0FA0CE; }
 
 
-/* ボタン
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 .button,
 button,
 input[type="submit"],
@@ -224,8 +164,6 @@ input[type="button"]:focus {
   outline: 0; }
 
 
-/* フォーム
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -286,13 +224,13 @@ label > .label-body {
   font-weight: normal; }
 
 
-/* リスト
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 ul {
-  list-style: circle inside; }
+  list-style: none; }
 ol {
-  list-style: decimal inside; }
+  list-style: none; }
 ol, ul {
+  
   padding-left: 0;
   margin-top: 0; }
 ul ul,
@@ -305,8 +243,6 @@ li {
   margin-bottom: 1rem; }
 
 
-/* コード
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 code {
   padding: .2rem .5rem;
   margin: 0 .2rem;
@@ -320,8 +256,7 @@ pre > code {
 }
 
 
-/* テーブル
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 table {
 	border-collapse: collapse; }
 th,
@@ -337,8 +272,7 @@ td:last-child {
   padding-right: 0; }
 
 
-/* スペース
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 button,
 .button {
   margin-bottom: 1rem; }
@@ -359,8 +293,6 @@ form {
   margin-bottom: 2.5rem; }
 
 
-/* 全幅
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .full-width {
   width: 100%;
   box-sizing: border-box; }
@@ -373,11 +305,11 @@ form {
   float: left; }
 
 
-/* 罫線
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border-width: 0;
   border-top: 1px solid #ccc; 
+}
 }

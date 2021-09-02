@@ -24,8 +24,7 @@ a img:hover {
 	text-align: center;
 }
 
-/*ヘッダー
--------------------------------------*/
+
 .head {
 	display: flex;
     flex-direction: row;
@@ -206,3 +205,37 @@ footer h5 {
     display: inline-block;
     color: #959fa5;
 }
+
+.matome {
+    position: relative;
+    list-style: none;
+
+    
+}
+
+
+.matome2 {
+    list-style: none;
+}
+
+
+
+.btn04 {
+        display: inline-block;
+        text-decoration: none;
+        color: #668ad8;
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+        border-radius: 50%;
+        border: solid 2px #668ad8;
+        text-align: center;
+        overflow: hidden;
+        font-weight: bold;
+        transition: .4s;
+      }
+      
+      .btn04:hover {
+        background: #b3e1ff;
+      }
+
