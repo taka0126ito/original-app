@@ -4,52 +4,60 @@
 
 
 <html>
+<div class="title">
+<% if user_signed_in?%>
+  <h2><%= link_to current_user.nickname %></h2>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+<% else %>
+  <h2>
+  <%= link_to "新規登録", new_user_registration_path %></h2>
+  <%= link_to "ログイン", new_user_session_path %>
+<% end %>
+</div>
+           <div class="naming">
+            <li><%= link_to "一覧", edit_main_path(@mains) %></li>
+           </div>
 
+
+    <div class="naming2">
+            <li><%= link_to "今日のトレーニング", new_main_path %></li>
+            </div>
+ 
+           
     <div class="mainimg">
-              <img src="/assets/gymm.jpeg" alt="メイン画像">
+              <image src="/assets/gym3.jpeg" alt="メイン画像">
         </div>
+
+        
     <main>
 <section>
 <body>
+<div class="menu">
 
- <% @mains.each do |main| %>
+</div>
 
-    <div class="matome" style="background-image: url(<%= main.image %>);">
-    <ul>
-		<%= image_tag main.image.variant(resize: '300x300'), class: "item-img" if main.image.attached? %>						
-      </div>
-			<li>
-     <div class="matome2">
-      <%= main.event.name %>
-    
-    <%= main.weight.name %>kg
-    
-			 <%= main.number.name %>回
-			<%= main.sets.name %>セット
-						<%= link_to '削除', main_path(main.id), method: :delete, class:"btn04",data: { confirm: '削除しますか？' } %>
-
-				</div>
-				</li>
-				</ul>
-    </div>
-		<% end %>
 </section>
+
     </main>
 		</body>
     <footer>
-
     </footer>
-    <div class="copyright">
-<div class="container">
-<div class="row">
+
     <div class="col"><hr>
-    Let's go <a href="https://www.youtube.com/" target="_blank">youtube. </a>
-    <%= link_to 'つぶやき', "https://twitter.com/t60312831", title: 'Twitter', target: '_blank', class:"twitter-text"%>
-    </div>    
-        </div>
-    </div>
-        </div>
+    Let's go  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<ul class="follow-me">
+  <li><a href="https://twitter.com"></a></li>  
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<ul class="follow-me2">
+  <li><a href="https://www.youtube.com"></a></li>
+    </div>  
+
+   
+    
 <p id="pagetop"><a href="#">TOP</a></p>    
 </div>
 </div>
 </html>
+</div>

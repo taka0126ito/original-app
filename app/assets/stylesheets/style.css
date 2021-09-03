@@ -1,159 +1,93 @@
-@charset "UTF-8";
-@import url("grid.css");
+.html {
+    background-color: black;
+}
+
+
+.all {
+    background-color:white;
+}
+
+.all2 {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.text {
+    text-align: center;
+    color: black;
+}
 
 img {
-	max-width:100%;
-	height: auto;/*高さ自動*/
-}
-a {
-    display:block;
-    color: #666;
-    text-decoration-line: none;
-}
-a:hover { 
-    color: #999;
-}
-a img:hover {
-	opacity: 0.8;
-}
-.underline {
-	border-bottom: 3px solid #000;
-	padding-bottom: 0.5rem;
-}
-.center {
-	text-align: center;
+	width:100%;
+	height: auto;
+    margin: 20px 0 0 0 ;
 }
 
 
-.head {
-	display: flex;
-    flex-direction: row;
-    padding: 1rem 0 0 0;
-}
-
-.head h1 { 
-    padding: 1rem 0;
-	font-weight: 700;
-	letter-spacing: 3px;
-}
-.snsbox {
-	margin-left: auto;
-	font-size: 3.0rem;
-	padding: 1rem 0 0 0;
-}
-nav ul {
-	display: flex;
-    flex-direction: row;
-    justify-content: center;
-    list-style: none;
-	margin-bottom: 0.5rem;
-}
-nav li {
-    display: block;
-    flex: 0 0 15%;
-}
-nav li a {
-    text-decoration: none;
+.mainimg {
     text-align: center;
 }
-nav a:hover {
-    text-decoration: underline;
-}
-nav a {
-    padding: 1rem;
+
+.matome {
+    width:16%;
+    height: auto;
+    text-align: center;
 }
 
-@media screen and (min-width: 768px){
-/* PC時はMENUボタンを非表示 */
-#open,#close {
-    display: none !important;
+.matome2 {
+    width:20%;
+    height: auto;
+    text-align: center;
+    font-size: 14px;
+    margin: 30px 20px 0 0;
+
 }
 
-#navi {
-    display: block !important;
-}
-}
-
-@media screen and (max-width: 768px){
-.head {
-	flex-direction: column;
-    text-align: left;
-    margin-bottom: 20px;
-}
-.telbox {
-	margin-left: 0;
-	text-align: center;
-}
-.head #open,#close  {
-    position: absolute;
-    top: 28px;
-    right: 12px;
-    }
-nav ul {
-	flex-direction: column;
+.menu {
+    text-align: center;
+    font-size: 30px;
+    font-family: fantasy;
+    color: black;
+    margin: 20px 0 0 685px;
 }
 
-nav li {
-	padding-top: 0;
-	border-bottom: 1px solid #ccc;
-	margin-bottom: 0;
+
+.yoko {
+    display: flex;
+            
 }
-/* スマホ時はMENUボタンを表示 */
-#open {
-    display: block;
-    background: url(../img/button.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+
+
+.snsbox {
+    margin: 0 100px 0 0;
+    font-size: 1.0rem;
+    float: right;
+}
+
+
+.btn04 {
+    display: inline-block;
+    text-decoration: none;
+    color: red;
     width: 50px;
     height: 50px;
-    border: none;
-    position: absolute;
-    top: 20px;
-    right: 12px;
-}
-#close  {
-    display: block;
-    background: url(../img/button2.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 50px;
-    height: 50px;
-    border: none;
-    position: absolute;
-    top: 20px;
-    right: 12px;
-}
-/* スマホ時はメニューを非表示 */
-#navi {
-    display: none;
-}
-}
+    line-height: 50px;
+    border-radius: 50%;
+    border: solid 2px #668ad8;
+    text-align: center;
+    overflow: hidden;
+    font-weight: bold;
+    transition: .4s;
+    margin: 0 0 30px 0;
+  }
+  
+  .btn04:hover {
+    background: #b3e1ff;
+  }
 
-/*メイン画像
--------------------------------------*/
-.mainimg img {
-	width: 100vw;
-    height: 70vh
-}
-
-/*メインコンテンツ
--------------------------------------*/
-main {
-    margin: 5rem 0 5rem 0;
-}
-
-/*キャッチタイトル
--------------------------------------*/
-h2.catch {
-	text-align: center;
-	color: #666;
-	font-size: 4.0rem;
-	margin-bottom: 3rem;
-}
-
-/*フッター
--------------------------------------*/
-footer {
+  footer {
     background-color: #fff;
     padding: 3rem 0;
 }
@@ -161,21 +95,6 @@ footer h5 {
     border-bottom: 1px solid #ccc;
 }
 
-/*コピーライト
--------------------------------------*/
-.copyright {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #fff;
-}
-.copyright a {
-    color: #000;
-    text-decoration: none;
-	display: inline-block;
-}
-
-/*ページトップへ戻るボタン
--------------------------------------*/
 #pagetop {
     position: fixed;
     bottom: 15px;
@@ -183,7 +102,7 @@ footer h5 {
 }
 #pagetop a {
     display: block;
-    background: #666;
+    background: black;
     color: #fff;
     width: 50px;
     padding: 10px 5px;
@@ -192,50 +111,193 @@ footer h5 {
 #pagetop a:hover {
     background: #999;
 }
-/*パンくずリスト
------------------------------------*/
+
 .breadcrumb {
+
     margin: 0 0 1em 0;
     padding: 0;	
 }
 .breadcrumb li {
     list-style-type: none;
+    
 }
 .breadcrumb li a {
     display: inline-block;
     color: #959fa5;
 }
 
-.matome {
-    position: relative;
+.col {
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+}
+
+.follow-me {
     list-style: none;
+    margin: 0 0 -8px;
+    overflow: hidden;
+    padding: 0;
+  }
+  .follow-me li {
+    float: left;
+    margin: 0 50px 0 650px;
+    padding: 0;
+  }
+  .follow-me li a::before {
+    background-color: #eee;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: #333;
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 16px;
+    height: 44px; /* Button height */
+    line-height: 44px; /* Button height */
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    text-align: center;
+    width: 44px; /* Button width */
+  }
+  .follow-me li a:hover::before {
+    color:rgba(0, 0, 255, 0.466);
+  }
+  .follow-me li a[href*="twitter.com"]::before        { content: "\f099"; }
+
+
+
+  .follow-me2 {
+    list-style: none;
+    margin: 0 0 -8px;
+    overflow: hidden;
+    padding: 0;
+  }
+  .follow-me2 li {
+    float: left;
+    margin: 0 600px 0 0;
+    padding: 0;
+  }
+  .follow-me2 li a::before {
+   
+    background-color: #eee;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: #333;
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 16px;
+    height: 44px; /* Button height */
+    line-height: 44px; /* Button height */
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    text-align: center;
+    width: 44px; /* Button width */
+  }
+  .follow-me2 li a:hover::before {
+    color: red;
+  }
+  .follow-me2 li a[href*="twitter.com"]::before        { content: "\f099"; }
+
+  .follow-me2 li a[href*="youtube.com"]::before        { content: "\f16a"; }
+
+  .title {
+      font-family: cursive;
+     font-size: 20px;
+     float: right;
+     margin: 0 50px 0 0 ; 
+     color: white;
+    }
+
+    .head {
+        font-family: Arial, Helvetica, sans-serif;
+        
+        font-size: 40px;
+        margin: 100px 0 0 600px ;
+    }
+ 
+      .text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        margin: 10px 0 0 585px ;
+
+          }
+
+
+    .naming {
+     display: inline-block;
+     justify-content: space-around;
+     float: right;
+     margin: 80px 400px 20px 0 ;
+     list-style: none;
+     text-align: center;
+    }
+
+    .naming2 {
+      display: inline-block;
+      justify-content: space-around;
+      float: right;
+      margin: 80px 200px 20px 0 ;
+      list-style: none;
+      text-align: center;
+     }
+ 
+    .main-box {
+        font-size: 30px;
+        text-align: center;
+        color: black;
+       
+    }
+
+    .select {
+        font-size: 30px;
+        text-align: center;
+        color: white;
+    }
+
+    .select2 {
+        font-size: 50px;
+        text-align: center;
+    }
 
     
-}
-
-
-.matome2 {
-    list-style: none;
-}
-
-
-
-.btn04 {
-        display: inline-block;
-        text-decoration: none;
-        color: #668ad8;
-        width: 90px;
-        height: 90px;
-        line-height: 90px;
-        border-radius: 50%;
-        border: solid 2px #668ad8;
-        text-align: center;
-        overflow: hidden;
-        font-weight: bold;
-        transition: .4s;
-      }
-      
-      .btn04:hover {
-        background: #b3e1ff;
-      }
-
+        .btn-open {
+            display: inline-block;
+            width: 180px;
+            height:50px;
+            text-align: center;
+            background-color:black;
+            font-size: 16px;
+            line-height: 52px;
+            color: #FFF;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid white;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            margin: 30px 0 0 630px;
+          }
+          .btn-open:after{
+            width: 100%;
+            height: 0;
+            content:"";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background : red;
+            opacity: 0;
+            transform: translateX(-50%) translateY(-50%) rotate(45deg);
+            transition: .2s;
+            z-index: -1;
+          }
+          .btn-open:hover{
+            color: #9ec34b;
+          }
+          .btn-open:hover:after{
+            height: 240%;
+            opacity: 1;
+          }
+          .btn-open:active:after{
+            height: 340%;
+            opacity: 1;
+          }
+          

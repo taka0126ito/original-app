@@ -1,8 +1,4 @@
 class MainsController < ApplicationController
-
-
-  
-
   def index
     @mains = Main.all.order(created_at: :DESC)
   end
@@ -12,10 +8,10 @@ class MainsController < ApplicationController
   end
 
   def edit
+    @mains = Main.all
   end
 
   def create
-    
     @main = Main.new(main_params)
     if @main.save
       redirect_to root_path
@@ -26,6 +22,7 @@ class MainsController < ApplicationController
   end
 
   def show
+    
   end
 
   def update
@@ -42,5 +39,4 @@ class MainsController < ApplicationController
   def main_params
     params.require(:main).permit(:image, :event_id, :weight_id, :number_id, :sets_id).merge(user_id: current_user.id)
   end
-
 end

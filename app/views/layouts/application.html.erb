@@ -6,16 +6,6 @@
     <%= csp_meta_tag %>
 
 <meta charset="UTF-8">
-<div class="title">
-<% if user_signed_in?%>
-  <h2><%= link_to current_user.nickname %></h2>
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-<% else %>
-  <h2></h2>
-  <%= link_to "新規登録", new_user_registration_path %>
-  <%= link_to "ログイン", new_user_session_path %>
-<% end %>
-</div>
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1">

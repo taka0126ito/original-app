@@ -1,47 +1,92 @@
-
+<div class="all2">
 <%= render "shared/header" %>
 
 
 <%= form_with model: @main, url:mains_path, local: true do |f| %>
-<label class="form-image">
-<%= f.file_field :image, id:"item-image" %>
 
+<label class="select2">
+<div class="text">
+<%= f.file_field :image, id:"item-image" %>
+</div>
     </label>
   <div class="main-box">
     種目
     </div>
-    <div class="event-select">
+    <div class="select">
     <%= f.collection_select(:event_id, Event.all, :id, :name, {}) %>
     </div>
 
     <div class="main-box">
     重量
     </div>
-    <div class="weight-select">
+    <div class="select">
     <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}) %>
     </div>
 
     <div class="main-box">
     回数
     </div>
-    <div class="number-select">
+    <div class="select">
     <%= f.collection_select(:number_id, Number.all, :id, :name, {}) %>
     </div>
 
     <div class="main-box">
     セット数
     </div>
-    <div class="set-select">
+    <div class="select">
     <%= f.collection_select(:sets_id, Sets.all, :id, :name, {}) %>
     </div>
     
-    <div class="cp-btn">
+    <div class="btn-open">
     <%= f.submit "登録" %>
 
-
   </div>
-  
+ 
 <% end %>
 
+<%= form_with model: @main, url:mains_path, local: true do |f| %>
+
+<label class="select2">
+<div class="text">
+<%= f.file_field :image, id:"item-image" %>
+</div>
+    </label>
+  <div class="main-box">
+    種目
+    </div>
+    <div class="select">
+    <%= f.collection_select(:event_id, Event.all, :id, :name, {}) %>
+    </div>
+
+    <div class="main-box">
+    重量
+    </div>
+    <div class="select">
+    <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}) %>
+    </div>
+
+    <div class="main-box">
+    回数
+    </div>
+    <div class="select">
+    <%= f.collection_select(:number_id, Number.all, :id, :name, {}) %>
+    </div>
+
+    <div class="main-box">
+    セット数
+    </div>
+    <div class="select">
+    <%= f.collection_select(:sets_id, Sets.all, :id, :name, {}) %>
+    </div>
+    
+    <div class="btn-open">
+    <%= f.submit "登録" %>
+
+  </div>
+ 
+<% end %>
+
+
+</div>
 
  
