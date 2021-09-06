@@ -4,11 +4,19 @@ class MainsController < ApplicationController
   end
 
   def new
+    if user_signed_in?
     @main = Main.new
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def edit
+    if user_signed_in?
     @mains = Main.all
+  else
+    redirect_to new_user_session_path
+  end
   end
 
   def create
