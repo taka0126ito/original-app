@@ -1,4 +1,7 @@
 class MainsController < ApplicationController
+  before_action :authenticate_user!
+ 
+
   def index
     @mains = Main.all.order(created_at: :DESC)
     @potential = Potential.all
