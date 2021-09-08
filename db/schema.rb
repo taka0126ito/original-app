@@ -46,9 +46,9 @@ ActiveRecord::Schema.define(version: 2021_08_27_023656) do
 
   create_table "potentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
-    t.string "bench_press"
-    t.string "squat"
-    t.string "deadlift"
+    t.string "bench_press", null: false
+    t.string "squat", null: false
+    t.string "deadlift", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_potentials_on_user_id"
