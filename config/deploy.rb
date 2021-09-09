@@ -1,13 +1,14 @@
-lock '3.16.0'
+lock "3.16.0"
 
-set :application, 'original-app'
+set :application, "original-app"
 
-set :repo_url,  'git@github.com:taka0126ito/original-app.git'
+set :repo_url,  "git@github.com:taka0126ito/original-app.git"
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
 set :rbenv_type, :user
 set :rbenv_ruby, '2.6.5' 
+
 set :ssh_options, auth_methods: ['publickey'],
                                   keys: ['~/.ssh/ti-1016013.pem'] 
 
