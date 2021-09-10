@@ -2,7 +2,7 @@ class MainsController < ApplicationController
  
 
   def index
-    @mains = Main.all.order(created_at: :DESC)
+    @mains = Main.order(created_at: :DESC)
     @potential = Potential.all
     
   end
@@ -21,7 +21,7 @@ class MainsController < ApplicationController
 
   def show
     if user_signed_in?
-      @mains = Main.all
+      @mains = Main.all.order(created_at: :DESC)
     else
       redirect_to new_user_session_path
     end
