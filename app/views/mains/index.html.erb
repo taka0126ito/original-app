@@ -14,6 +14,12 @@
   <%= link_to "ログイン", new_user_session_path %>
 <% end %>
 </div>
+<div class="menu">
+<li>現在の体重
+<%= link_to current_user.weight, edit_main_path(@mains) %>
+kg</li>
+
+</div>
 
          <div class="naming">
             <li><%= link_to "一覧", main_path(@mains) %></li>
@@ -23,21 +29,15 @@
     <div class="naming2">
             <li><%= link_to "今日のトレーニング", new_main_path %></li>
             </div>
- 
-           
-    <div class="mainimg">
-              <image src="/assets/gym3.jpeg" alt="メイン画像">
-              
-        </div>
-
         
     <main>
 <section>
 <body>
-<div class="menu">
 
-</div>
-
+   <div class="mainimg">
+              <image src="/assets/gym3.jpeg" alt="メイン画像">
+              
+        </div>
 </section>
 
     </main>

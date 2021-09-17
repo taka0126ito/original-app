@@ -204,7 +204,7 @@ margin-right: auto;
       font-family: cursive;
      font-size: 20px;
      float: right;
-     margin: 0 50px 0 0 ; 
+     margin: 0 50px 0 100px ; 
      color: white;
     }
 
@@ -302,3 +302,11 @@ margin-right: auto;
             opacity: 1;
           }
           
+
+          .menu {
+            font-size: 20px;
+            list-style: none;
+            float: right;
+            margin: 0 50px 0 100px ;
+          }
+

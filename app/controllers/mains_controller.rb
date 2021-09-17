@@ -3,7 +3,8 @@ class MainsController < ApplicationController
 
   def index
     @mains = Main.order(created_at: :DESC)
-    @potential = Potential.all
+    
+    @potential = Potential.new(potential_params)
     
   end
 
@@ -16,7 +17,7 @@ class MainsController < ApplicationController
   end
 
   def edit
-    @main = main.find(params[:id])
+    
   end
 
   def show
