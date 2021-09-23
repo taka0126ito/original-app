@@ -3,7 +3,6 @@
 <%= form_with model:@user, local: true do |f| %>
 今の体重
 <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class:"select-box", id:"user-category"}) %>
-<%#= f.text :name, class:"mains-text", id:"main-name", placeholder:"現在の体重（必須 ３文字まで)", maxlength:"３" %>
       <%= f.submit "変更する" ,class:"sell-btn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
       <% end %>
