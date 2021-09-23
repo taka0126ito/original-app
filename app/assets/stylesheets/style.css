@@ -227,7 +227,7 @@ margin-right: auto;
      display: inline-block;
      justify-content: space-around;
      float: right;
-     margin: 80px 400px 20px 0 ;
+     margin: 80px 0px 20px 0 ;
      list-style: none;
      text-align: center;
     }
@@ -307,6 +307,6 @@ margin-right: auto;
             font-size: 20px;
             list-style: none;
             float: right;
-            margin: 0 50px 0 100px ;
+            margin: 76px 50px 0 100px ;
           }
 
