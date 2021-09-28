@@ -1,11 +1,14 @@
 .html {
-    background-color: black;
+   
 }
 
 
 
 .all {
-    background-color:white;
+  background-image: url(/assets/tore.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
 }
 
 .all2 {
