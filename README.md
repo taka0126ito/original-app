@@ -16,7 +16,7 @@ https://original-app-36424.herokuapp.com/
 
 ログイン情報(テスト用)
 ・Eメール ti1016013@gmail.com
-・パスワード ti1016013
+・パスワード 111111
 
 # 制作背景
 
