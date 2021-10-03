@@ -3,23 +3,15 @@
  <% @mains.each do |main| %>
 
     <div class="matome" style="background-image: url(<%= main.image %>);">
-  
 		<%= image_tag main.image.variant(resize: '300x300'), class: "item-img" if main.image.attached? %>						
       </div>
-		
      <div class="matome2">
       <%= main.event.name %>
-    
     <%= main.weight.name %>kg
-    
 			 <%= main.number.name %>回
 			<%= main.sets.name %>セット
 						<%= link_to '削除', main_path(main.id), method: :delete, class:"btn04",data: { confirm: '削除しますか？' } %>
-
 				</div>
-	
-    
 		<% end %>
-
     </div>
 <%= render "shared/footer" %>
