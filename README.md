@@ -48,11 +48,11 @@ https://original-app-36424.herokuapp.com/
 
 新規登録画面をウィザード形式にしました。二つのページに分けて入力することで、対話形式での登録が可能となっています。
 
-https://gyazo.com/3eb94c2e9075005c0725e1da48bca6a2
+https://user-images.githubusercontent.com/87691215/135748915-bf16e938-766b-4e45-9f93-908d8bc23c45.mp4
 
 制作背景にも挙げましたが、、保存した情報一覧をトップページでは閲覧不可にしており、一覧のリンクにアクセスすることでことで全て閲覧可能となります。
 
-https://gyazo.com/ea35aac67715be16f8843439c9653b8f
+https://user-images.githubusercontent.com/87691215/135748920-cb9a9536-780b-4f43-94c4-a6550f699561.mp4
 
 
 # 開発環境
