@@ -1,51 +1,45 @@
 <%= render "shared/header" %>
-
 <html>
-<body>
-<div class="title">
-<% if user_signed_in?%>
-  <h2><%= link_to current_user.nickname %></h2>
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-<% else %>
-  <h2>
-  <%= link_to "新規登録", new_user_registration_path %>
-  <%= link_to "ログイン", new_user_session_path %></h2>
-<% end %>
+ <body>
+  <div class="title">
+   <% if user_signed_in?%>
+    <h2><%= link_to current_user.nickname %></h2>
+     <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <% else %>
+    <h2>
+   <%= link_to "新規登録", new_user_registration_path %>
+   <%= link_to "ログイン", new_user_session_path %></h2>
+  <% end %>
 </div>
 <div class="menu">
-<li>現在の体重
-kg</li>
+ <li>現在の体重
+  kg</li>
 </div>
-
 <div class="name">
-    <div class="naming">
-     <h2><%= link_to "一覧", main_path(@mains) %></h2>
-    </div>
-    <div class="naming2">
+  <div class="naming">
+    <h2><%= link_to "一覧", main_path(@mains) %></h2>
+  </div>
+   <div class="naming2">
      <h2><%= link_to "今日のトレーニング", new_main_path %></h2>
+   </div>
+  </div>        
+   <main>
+    <section>
+      <div class="mainimg">
+        <image src="/assets/tore.jpeg" alt="メイン画像">
+      </div>
     </div>
-</div>        
-    <main>
-<section>
-  <div class="mainimg">
-              <image src="/assets/tore.jpeg" alt="メイン画像">
+    </section>
+   </div>
   </div>
-  </div>
-</section>
-</body>
-    
-</div>
-</div>
+ </body>
 </html>
-
 <div class="col"><hr>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
    <ul class="follow-me">
-       <li><a href="https://twitter.com"></a></li>  
-
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-   <ul class="follow-me2">
-       <li><a href="https://www.youtube.com"></a></li>
+    <li><a href="https://twitter.com"></a></li>  
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+       <ul class="follow-me2">
+    <li><a href="https://www.youtube.com"></a></li>
 </div>  
 <p id="pagetop"><a href="#">TOP</a></p>  

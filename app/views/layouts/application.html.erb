@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html>
+ <html>
   <head>
-    <title>Training Diary</title>
+   <title>Training Diary</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-<meta charset="UTF-8">
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-   
-
-
-
-
-<!-- Favicon -->
-<link rel="icon" type="assets/png" href="/assets/favicon.png">
-    
-    
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <%= csp_meta_tag %>
+      <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="assets/png" href="/assets/favicon.png">
+       <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
-  <body>
+   <body>
     <%= yield %>
   </body>
 </html>
